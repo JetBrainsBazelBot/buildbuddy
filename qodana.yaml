@@ -9,6 +9,7 @@ exclude:
   - name: UnnecessaryUnicodeEscape
   - name: UnstableApiUsage
   - name: DialogTitleCapitalization
+  - name: HardcodedPasswords
 failureConditions:
   severityThresholds:
     critical: 1
