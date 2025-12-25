@@ -28,7 +28,6 @@ profile:
         - "**/*.yaml"
         - "**/*.yml"
         - "**/*.zsh"
-        - "**/*.sh"
 failureConditions:
   severityThresholds:
     critical: 1
