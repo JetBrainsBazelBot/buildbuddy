@@ -1,15 +1,34 @@
 version: "1.0"
 profile:
-  name: qodana.recommended
-include:
-  - name: QodanaSanity
-  - name: HighlightVisitorInternal
-exclude:
-  - name: CheckDependencyLicenses
-  - name: UnnecessaryUnicodeEscape
-  - name: UnstableApiUsage
-  - name: DialogTitleCapitalization
-  - name: HardcodedPasswords
+  base:
+    name: empty
+  groups:
+    - groupId: PluginRegressions
+      inspections:
+        - QodanaSanity
+        - HighlightVisitorInternal
+  inspections:
+    - group: PluginRegressions
+      enabled: true
+      ignore:
+        - "**/*.bash"
+        - "**/*.def"
+        - "**/*.ft"
+        - "**/*.http"
+        - "**/*.ignore"
+        - "**/*.json"
+        - "**/*.ndjson"
+        - "**/*.ps1"
+        - "**/*.rest"
+        - "**/*.rnc"
+        - "**/*.sh"
+        - "**/*.template"
+        - "**/*.toml"
+        - "**/*.vm"
+        - "**/*.yaml"
+        - "**/*.yml"
+        - "**/*.zsh"
+        - "**/*.sh"
 failureConditions:
   severityThresholds:
     critical: 1
